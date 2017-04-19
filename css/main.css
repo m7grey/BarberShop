@@ -639,6 +639,7 @@ body {
 	top: 120px;
 	left: 50%;
 
+	display: none; /* show account form*/
 	width: 300px;
 	margin-left: -230px;
 	padding: 50px 80px;
@@ -685,21 +686,21 @@ body {
 	transform: rotate(-45deg);
 }
 
-.modal-content h2{
-	margin:0;
-	margin-bottom:20px;
+.modal-content h2 {
+	margin: 0;
+	margin-bottom: 20px;
 
 	font-size: 30px;
 	line-height: 42px;
 }
 
-.modal-content p{
-	margin:0;
-	margin-bottom:14px;
+.modal-content p {
+	margin: 0;
+	margin-bottom: 14px;
 }
 
 .login-form input[type="text"],
-.login-form input[type="password"]{
+.login-form input[type="password"] {
 	width: 236px;
 	margin: 0;
 	margin-bottom: 10px;
@@ -717,25 +718,73 @@ body {
 	outline: none;
 }
 
-.login-form input:focus{
+.login-form input:focus {
 	background-color: #663d15;
 }
-.login-form input.icon-user{
+
+.login-form input.icon-user {
 	background-image: #FFFF00 url("img/sprite.png");
 	background-repeat: no-repeat;
 	background-position: 100% -504px;
 }
 
-.login-form input.icon-password{
+.login-form input.icon-password {
 	background-image: #FFFF00 url("img/sprite.png");
 	background-repeat: no-repeat;
 	background-position: 100% -45px;
 }
-.login-form .restore{
+
+.login-form .restore {
 	float: right;
 	color: #000;
 }
 
-.modal-content .btn{
-	float: left;
+.login-form .btn {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.login-checkbox {
+	position: relative;
+
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.login-checkbox:hover {
+	color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: -3px;
+	left: 0;
+
+	width: 17px;
+	height: 17px;
+	border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 1px;
+
+	width: 15px;
+	height: 2px;
+	background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+	transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	transform: rotate(-45deg);
 }
